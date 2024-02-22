@@ -1,1 +1,23 @@
-/* здесь используйте глобальные переменные */
+// Colors
+$color-basic-light: #ffffff;
+$color-basic-dark: #333333;
+$color-basic: #bdbdbd;
+$color-main: #f0ebff;
+$color-main-dark: #7859cf;
+$color-background-main: #f8f8f8;
+$color-background-basic: #f3ebe1;
+$color-background-latte: #eae6fc;
+$color-background-espresso: #e5e6e8;
+
+// Fonts
+
+$ff-montserrat: "Montserrat", "Arial", sans-serif;
+
+// Viewports
+
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+// Retina
+
+$retina: 2dppx;

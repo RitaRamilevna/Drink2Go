@@ -1,7 +1,10 @@
+/* CTRL + SHIFT + P, then SAVE WITHOUT FORMATTING */
 /* GLOBAL */
 @import "./global/variables.scss";
-@import "./global/global.scss";
 @import "./global/fonts.scss";
+@import "./global/global.scss";
+@import "./global/utils.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/container.scss";
