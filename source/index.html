@@ -16,55 +16,56 @@
 
 <body class="body no-js">
   <div class="wrapper">
-    <header class="main-header" data-test="header">
+    <header class="main-header">
       <div class="main-header__container container">
-
-        <div class="main-header__logo-container">
-          <a class="main-header__logo" href="index.html" aria-current="page">
-            <picture>
-              <source media="(min-width: 1440px)" type="image/svg" srcset="images/logo-desktop.svg" width="170" height="36">
-              <source media="(min-width: 768px)" type="image/svg" srcset="images/logo-tablet.svg" width="82" height="36">
-              <img src="images/logo-mobile.svg" width="32" height="36" alt="Логотип компании Drink2Go.">
-            </picture>
-          </a>
-          <h1 class="main-header__title">Интернет-магазин кофейных напитков</h1>
-        </div>
-
-        <nav class="main-header__nav main-nav">
-          <button class="main-nav__toggle js-toggle-button" type="button">
-            <span class="visually-hidden">Открыть/закрыть меню.</span>
-          </button>
-          <ul class="main-nav__list list-reset">
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--current" href="index.html" aria-current="page">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#catalog">Каталог</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Доставка</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#features">О нас</a>
-            </li>
-          </ul>
-
-          <div class="main-header__user user-list list-reset">
-            <a class="user-list__login" href="#">
-              <svg class="user-list__login-icon" width="60" height="60">
-                <use href="images/icons/stack.svg#account"></use>
-              </svg>
-              Войти
+        <!-- Для отображения меню заменить модификатор объекта main-nav с closed на opened -->
+        <nav class="main-nav main-nav--opened main-nav--nojs">
+          <div class="main-nav__logo-container">
+            <a class="main-nav__logo" href="index.html" aria-current="page">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/svg+xml" srcset="images/logo-desktop.svg" width="170" height="36">
+                <source media="(min-width: 768px)" type="image/svg+xml" srcset="images/logo-tablet.svg" width="82" height="36">
+                <img src="images/logo-mobile.svg" width="32" height="36" alt="Логотип компании Drink2Go.">
+              </picture>
             </a>
-            <a class="user-list__basket" href="#">
-              <svg class="user-list__login-icon" width="60" height="60">
-                <use href="images/icons/stack.svg#basket"></use>
-              </svg>
-              Корзина
-            </a>
+            <h2 class="main-nav__title-logo">Интернет-магазин кофейных напитков</h2>
+          </div>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list list-reset">
+              <li class="site-list__item">
+                <a class="site-list__link site-list__link--current" href="index.html" aria-current="page">Главная</a>
+              </li>
+              <li class="site-list__item site-list__item--active">
+                <a class="site-list__link" href="#catalog">Каталог</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#catalog">Доставка</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#features">О нас</a>
+              </li>
+            </ul>
+            <ul class="main-nav__list user-list list-reset">
+              <li class="user-list__item">
+                <a class="user-list__login js-login" href="login.html">
+                  <svg class="user-list__login-icon" width="16" height="16">
+                    <use href="images/icons/stack.svg#account"></use>
+                  </svg>
+                  <span class="user-list__title">Войти</span>
+                </a>
+              </li>
+              <li class="user-list__item">
+                <a class="user-list__login js-login" href="login.html">
+                  <svg class="user-list__login-icon" width="16" height="16">
+                    <use href="images/icons/stack.svg#basket"></use>
+                  </svg>
+                  <span class="user-list__title">Корзина</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </nav>
-
       </div>
     </header>
 
@@ -510,8 +511,8 @@
       <div class="main-footer__logo">
         <a class="main-footer__logo" href="index.html" aria-current="page">
           <picture>
-            <source media="(min-width: 1440px)" type="image/svg" srcset="images/footer-logo-desktop.svg" width="170" height="36">
-            <source media="(min-width: 768px)" type="image/svg" srcset="images/footer-logo-tablet.svg" width="170" height="36">
+            <source media="(min-width: 1440px)" type="image/svg+xml" srcset="images/footer-logo-desktop.svg" width="170" height="36">
+            <source media="(min-width: 768px)" type="image/svg+xml" srcset="images/footer-logo-tablet.svg" width="170" height="36">
             <img src="images/footer-logo-mobile.svg" width="82" height="36" alt="Логотип компании Drink2Go.">
           </picture>
         </a>
@@ -522,7 +523,7 @@
         <h3 class="visually-hidden">Мы в соцсетях</h3>
         <ul class="social__list list-reset">
           <li class="social__item">
-            <a class="social__link" href="https://vk.com/htmlacademy" target="_blank">
+            <a class="social__link" href="https://vk.com/htmlacademy">
               <svg class="social__link-icons" width="40" height="40">
                 <use href="images/icons/stack.svg#social-vk-mobile"></use>
               </svg>
@@ -530,7 +531,7 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="https://ru.pinterest.com/keks_is_html_academy" target="_blank">
+            <a class="social__link" href="https://ru.pinterest.com/keks_is_html_academy">
               <svg class="social__link-icons" width="40" height="40">
                 <use href="images/icons/stack.svg#social-pinterest-mobile"></use>
               </svg>
@@ -538,7 +539,7 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="https://ok.ru/htmlacademy" target="_blank">
+            <a class="social__link" href="https://ok.ru/htmlacademy">
               <svg class="social__link-icons" width="40" height="40">
                 <use href="images/icons/stack.svg#social-odnoklassniki-mobile"></use>
               </svg>
@@ -593,7 +594,7 @@
 
       <div class="main-footer__developer">
         <span class="main-footer__developer-text">Разработано в</span>
-        <a class="main-footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+        <a class="main-footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy
           <svg width="12" height="16">
             <use href="images/icons/stack.svg#logo-academy"></use>
