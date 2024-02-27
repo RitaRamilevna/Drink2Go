@@ -1,0 +1,85 @@
+.checkbox {
+  position: relative;
+
+  padding-left: 52px;
+
+  outline: none;
+}
+
+.checkbox__pin {
+  position: absolute;
+  left: 0;
+
+  box-sizing: border-box;
+  width: 42px;
+  height: 24px;
+
+  background-color: $color-basic;
+  border: 2px solid $color-basic;
+  border-radius: 12px;
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+
+    background-color: $color-basic-light;
+    border-radius: 50%;
+    transform: translateX(0%) translateY(-50%);
+
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.checkbox__title {
+  cursor: pointer;
+}
+
+.checkbox__input:hover + .checkbox__pin,
+.checkbox__input:focus + .checkbox__pin {
+  background-color: $color-main-dark-opacity;
+  border-color: $color-main-dark-hover;
+}
+
+.checkbox__input:checked + .checkbox__pin {
+  background-color: $color-main-dark;
+  border-color: $color-main-dark;
+
+  &::before {
+    transform: translateX(89%) translateY(-50%);
+  }
+}
+
+.checkbox__input[disabled] ~ .checkbox__pin {
+  background-color: $color-main-light;
+  border-color: $color-main-light;
+  cursor: default;
+
+  &::before {
+    background-color: $color-background-main;
+  }
+}
+
+.checkbox__input[disabled]:checked ~ .checkbox__pin {
+  background-color: $color-main-light;
+  border-color: $color-main-light;
+  cursor: default;
+
+  &::before {
+    background-color: $color-basic;
+  }
+}
+
+.checkbox__input[disabled] ~ .checkbox__title {
+  color: $color-basic;
+
+  cursor: default;
+}

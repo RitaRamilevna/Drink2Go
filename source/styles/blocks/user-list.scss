@@ -11,7 +11,7 @@
 
     list-style: none;
 
-    gap: 16px;
+    gap: 21px;
   }
 }
 
@@ -25,10 +25,13 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.02em;
+  color: $color-basic-dark;
+
+  fill: $color-basic-dark;
 
   &:active {
-    background-color: #ff0000;
+    background-color: $color-main;
   }
 
   @media (min-width: $tablet-width) {
@@ -36,11 +39,17 @@
 
     &:hover,
     &:focus {
-      color: #ff0000;
+      color: $color-main-dark;
+
+      fill: $color-main-dark;
     }
 
     &:active {
-      color: #ff0000;
+      color: $color-main-dark;
+
+      background-color: $color-main;
+
+      fill: $color-main-dark;
     }
   }
 
@@ -48,6 +57,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 32px 20px;
   }
 }
 

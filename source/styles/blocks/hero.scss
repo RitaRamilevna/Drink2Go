@@ -1,0 +1,302 @@
+.hero {
+  position: relative;
+  z-index: 20;
+
+  width: 100%;
+}
+
+.hero__list {
+  position: relative;
+
+  height: min-content;
+  min-height: 656px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    height: 828px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 714px;
+  }
+}
+
+.hero__item {
+  position: absolute;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__item--show {
+  display: block;
+}
+
+.hero__item-container {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 20px 20px 60px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column-reverse;
+    padding: 60px 80px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    padding: 30px 80px 60px 45px;
+  }
+}
+
+.hero__item-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+
+  @media (min-width: $tablet-width) {
+    bottom: 188px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 0;
+  }
+}
+
+.hero__item-background--first {
+  background-color: $color-background-basic;
+}
+
+.hero__item-background--second {
+  background-color: $color-background-latte;
+}
+
+.hero__item-background--third {
+  background-color: $color-background-espresso;
+}
+
+.hero__item-image-link {
+  margin: 0;
+  margin-bottom: 10px;
+
+  line-height: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 30px;
+  }
+}
+
+.hero__item-image-link img {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    min-width: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    min-width: 600px;
+  }
+}
+
+.hero__item-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (min-width: $desktop-width) {
+    align-items: flex-start;
+  }
+}
+
+.hero__item-title-link {
+  order: 1;
+
+  text-align: center;
+  text-decoration: none;
+}
+
+.hero__item-title {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: $color-basic-dark;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 16px;
+
+    font-size: 56px;
+    line-height: 80px;
+  }
+}
+
+.hero__item-subtitle {
+  order: 0;
+  margin: 0;
+  margin-bottom: 4px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-main-dark;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 150px;
+  }
+}
+
+.hero__item-description {
+  order: 2;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
+
+  line-height: 20px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+
+    text-align: left;
+  }
+}
+
+.hero__item-description br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.hero__item-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  order: 3;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.hero__item-price {
+  font-style: normal;
+  line-height: 32px;
+}
+
+.hero__item-price--regular {
+  margin-right: 6px;
+
+  font-size: 16px;
+  color: $color-main-dark;
+
+  text-decoration-line: line-through;
+}
+
+.hero__item-price--sale {
+  margin-right: 20px;
+
+  font-weight: 600;
+  font-size: 20px;
+  color: $color-basic-dark;
+}
+
+.hero__item-button {
+  min-width: 113px;
+}
+
+.hero__button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  display: block;
+  width: 20px;
+
+  color: $color-main-dark;
+
+  @media (min-width: $tablet-width) {
+    bottom: 187px;
+
+    width: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 0;
+  }
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, rgb(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
+  &:disabled {
+    color: $color-basic;
+
+    pointer-events: none;
+  }
+}
+
+.hero__button--prev {
+  left: 0;
+}
+
+.hero__button--next {
+  right: 0;
+
+  transform: rotateY(180deg);
+}
+
+.hero__button-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 20px;
+  height: 20px;
+
+  transform: translateX(-50%) translateY(-50%);
+}

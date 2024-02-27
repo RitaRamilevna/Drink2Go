@@ -1,0 +1,34 @@
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.social-list__item {
+  display: block;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+
+  line-height: 0;
+  color: $color-basic;
+
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    color: $color-main-dark;
+
+    background-color: $color-main;
+  }
+
+  &:active {
+    color: $color-main-dark;
+
+    background-color: rgb(120, 89, 207, 0.25);
+  }
+}

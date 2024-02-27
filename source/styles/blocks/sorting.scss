@@ -1,0 +1,83 @@
+.sorting {
+  display: flex;
+  align-items: center;
+  margin: 40px 0 16px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 16px 0 6px;
+  }
+}
+
+.sorting__title {
+  padding-left: 3px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 2px;
+  }
+}
+
+.sorting__select {
+  display: block;
+  justify-content: flex-end;
+  max-width: 174px;
+  padding: 4px 27px 4px 16px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $ff-montserrat;
+  text-align: center;
+  color: $color-main-dark;
+
+  background-color: transparent;
+  background-image: url("../../images/icons/sorting-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 6px;
+  border: 0;
+  border-radius: 4px;
+  outline: 0;
+  cursor: pointer;
+
+  appearance: none;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-main;
+    background-image: url("../../images/icons/sorting-arrow.svg");
+  }
+
+  &:focus {
+    background-color: $color-main;
+    background-image: url("../../images/icons/sorting-arrow.svg");
+  }
+}
+
+.sorting__option {
+  min-height: 40px;
+  padding: 8px 20px;
+
+  color: $color-basic-dark;
+
+  background-color: $color-basic-light;
+
+  &:checked {
+    color: $color-basic-light;
+
+    background-color: $color-main-dark;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-main;
+  }
+}

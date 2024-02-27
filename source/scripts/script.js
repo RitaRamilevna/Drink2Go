@@ -1,15 +1,20 @@
-/* const navMain = document.querySelector('.main-nav');
-const navToggle = document.querySelector('.main-nav__toggle');
+//бургер меню
 
-navMain.classList.remove('main-nav--nojs');
+const menu = () => {
+  const mainHeader = document.querySelector('.main-nav');
+  const navToggle = document.querySelector('.main-nav__toggle');
 
-navToggle.addEventListener('click', () => {
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
-  } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
-  }
-});
- */
+  mainHeader.classList.remove('main-nav--nojs');
+
+  navToggle.addEventListener('click', () => {
+    if (mainHeader.classList.contains('main-nav--closed')) {
+      mainHeader.classList.remove('main-nav--closed');
+      mainHeader.classList.add('main-nav--opened');
+    } else {
+      mainHeader.classList.add('main-nav--closed');
+      mainHeader.classList.remove('main-nav--opened');
+    }
+  });
+};
+
+menu();

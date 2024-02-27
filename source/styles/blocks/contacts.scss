@@ -1,0 +1,88 @@
+.contacts {
+  padding-top: 20px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $color-basic-dark;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: normal;
+}
+
+.contacts__address {
+  position: relative;
+
+  display: block;
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+  padding-left: 19px;
+
+  color: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+
+    width: 13px;
+    height: 16px;
+
+    background-image: url("../../images/icons/icon-address.svg");
+    background-repeat: no-repeat;
+
+    &:last-child {
+      padding-bottom: 8px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-main-dark-hover;
+  }
+
+  &:active {
+    color: $color-main-dark-active;
+  }
+}
+
+.contacts__phone {
+  position: relative;
+
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-left: 19px;
+
+  color: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+
+    width: 13px;
+    height: 16px;
+
+    background-image: url("../../images/icons/icon-phone.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-main-dark-hover;
+  }
+
+  &:active {
+    color: $color-main-dark-active;
+  }
+}

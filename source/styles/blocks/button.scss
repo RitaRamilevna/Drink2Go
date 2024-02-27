@@ -3,6 +3,7 @@
   margin: 0;
   padding: 8px;
 
+  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -30,6 +31,89 @@
   &:disabled,
   &--disabled {
     background-color: $color-basic;
+
+    pointer-events: none;
+  }
+}
+
+.button--light {
+  color: $color-main-dark;
+
+  background-color: $color-basic-light;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: $color-basic-light;
+
+    background-color: $color-main-dark-hover;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-basic-light;
+
+    background-color: $color-main-dark-active;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: $color-basic-light;
+
+    background-color: $color-main-light;
+
+    pointer-events: none;
+  }
+}
+
+.button--order-cart {
+  position: relative;
+
+  padding-right: 20px;
+  padding-left: 46px;
+
+  font-size: 14px;
+  line-height: 20px;
+
+  grid-column: 2/2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 20px;
+
+    width: 20px;
+    height: 16px;
+
+    color: $color-basic-light;
+
+    background-image: url("../../images/icons/basket-button.svg");
+    background-repeat: no-repeat;
+
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: $color-basic-light;
+
+    background-color: $color-main-dark-hover;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-basic-light;
+
+    background-color: $color-main-dark-active;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: $color-basic-light;
+
+    background-color: $color-main-light;
 
     pointer-events: none;
   }

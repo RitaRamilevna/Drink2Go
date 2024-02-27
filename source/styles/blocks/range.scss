@@ -1,0 +1,152 @@
+.range {
+  margin-top: 0;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 20px;
+  }
+}
+
+.range__scale {
+  position: relative;
+
+  width: 100%;
+  height: 2px;
+  margin-bottom: 105px;
+
+  background-color: $color-main-light;
+}
+
+.range__bar {
+  position: relative;
+  bottom: 1px;
+  left: 0;
+
+  width: 85%;
+  height: 4px;
+  margin-bottom: 33px;
+
+  background-color: $color-main-dark-hover;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 90%;
+    margin-bottom: 31px;
+  }
+}
+
+.range__toggle {
+  position: absolute;
+  top: -11px;
+  left: 0;
+  z-index: 1;
+
+  width: 24px;
+  height: 24px;
+  padding: 0;
+
+  background-color: $color-basic-light;
+  border: 2px solid $color-main-dark-hover;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+
+  &--toggle-min {
+    left: 0;
+  }
+
+  &--toggle-max {
+    left: calc(100% - 2px);
+
+    @media (min-width: $tablet-width) {
+      left: calc(100% - 10px);
+    }
+  }
+}
+
+.range__toggle:focus-visible::after,
+.range__toggle:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 16px;
+  height: 16px;
+  margin: auto;
+
+  background-color: $color-main-dark-opacity;
+  border: 0;
+  border-radius: 50%;
+}
+
+.range__toggle:active::after {
+  background-color: $color-main-dark;
+}
+
+.range__toggle:disabled {
+  background-color: $color-basic-light;
+  border-color: $color-basic;
+}
+
+.range__inputs {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+
+  gap: 44px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 10px;
+    height: 2px;
+    margin: auto;
+
+    background-color: $color-basic;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 48px;
+  }
+}
+
+.range__input {
+  width: 100%;
+  min-height: 40px;
+  margin: 0;
+  padding: 5px 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $ff-montserrat;
+  text-align: center;
+
+  border: 2px solid $color-main-dark-hover;
+  border-radius: 4px;
+  outline: 0;
+
+  &::placeholder {
+    color: $color-basic;
+  }
+
+  &:focus {
+    border: 2px solid $color-main-dark-active;
+  }
+
+  &:disabled {
+    border: 2px solid $color-main-light;
+  }
+}

@@ -1,0 +1,21 @@
+.map__img {
+  display: block;
+  width: 100%;
+  height: 420px;
+
+  background-color: $color-background-espresso;
+
+  @media (min-width: $tablet-width) {
+    height: 480px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 540px;
+  }
+}
+
+.map__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

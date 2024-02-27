@@ -57,29 +57,33 @@
   color: $color-basic-dark;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 0.09rem;
+  letter-spacing: 0.02em;
+
+  &:active {
+    background-color: $color-main;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 32px 20px;
 
-    letter-spacing: 0.09em;
+    letter-spacing: 0.02em;
 
     border: none;
+
+    &:hover,
+    &:focus {
+      color: $color-main-dark;
+    }
+
+    &:active {
+      color: $color-main-dark;
+
+      background-color: $color-main;
+    }
   }
 
   @media (min-width: $desktop-width) {
     margin-right: 20px;
-  }
-
-  &:hover,
-  &:focus,
-  &:focus-visible {
-    outline: none;
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }
 
